@@ -1,8 +1,9 @@
 def fibonacci(n):
-    a = 0
-    b = 1
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+n = int(input("Enter number of terms: "))
+
 for i in range(n):
-        print(a, end=" ")
-        a, b = b, a + b
-n = int(input("Enter the number of terms: "))
-fibonacci(n)
+    print(fibonacci(i), end=" ")
